@@ -22,7 +22,7 @@
    - [Here are good tips for writing a perfect resume](https://www.jobbank.gc.ca/findajob/resources/write-good-resume)
 
 ##### 3. Markdown text editor
- * In this tutorial, [VS studio code](https://code.visualstudio.com/) will b used
+ * In this tutorial, [VS studio code](https://code.visualstudio.com/) will be used
 
    
 **_If you are struggling to find a free markdown editor,  [Obsidian](https://obsidian.md/) is completely free and it is very easy to use_**
