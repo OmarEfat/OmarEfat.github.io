@@ -7,8 +7,8 @@
 
 
 #### Main goals:
-1. Using markdown for writing your resume 
-2.  Using Jekyll for creating your resume
+1.  Using markdown for writing your resume 
+2.  Using Jekyll for building your static website
 3.  Using GitHub to host your static website
 
 ## Prerequisites
