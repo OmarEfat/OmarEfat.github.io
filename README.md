@@ -1,116 +1,136 @@
-# The Hacker theme
+# Hosting Resume On GitHub Pages
 
-[![.github/workflows/ci.yaml](https://github.com/pages-themes/hacker/actions/workflows/ci.yaml/badge.svg)](https://github.com/pages-themes/hacker/actions/workflows/ci.yaml) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-hacker.svg)](https://badge.fury.io/rb/jekyll-theme-hacker)
 
-*Hacker is a Jekyll theme for GitHub Pages. You can [preview the theme to see what it looks like](http://pages-themes.github.io/hacker), or even [use it today](#usage).*
+## Purpose
 
-![Thumbnail of Hacker](thumbnail.png)
+#### The purpose of this tutorial is to show how to host your resume on Github using one of the static generator available like [Jekyll](https://jekyllrb.com/).
 
-## Usage
 
-To use the Hacker theme:
+#### Main goals:
+1. Using markdown for writing your resume 
+2.  Using Jekyll for creating your resume
+3.  Using GitHub to host your static website
 
-1. Add the following to your site's `_config.yml`:
+## Prerequisites
 
-    ```yml
-    remote_theme: pages-themes/hacker@v0.2.0
-    plugins:
-    - jekyll-remote-theme # add this line to the plugins list if you already have one
-    ```
+### There are few prerequisites needed before you start 
 
-2. Optionally, if you'd like to preview your site on your computer, add the following to your site's `Gemfile`:
+##### 1.  GitHub account
+   - [Click here to know how to create an account in GitHub](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
 
-    ```ruby
-    gem "github-pages", group: :jekyll_plugins
-    ```
+##### 2. Your resume ready 
+   - [Here are good tips for writing a perfect resume](https://www.jobbank.gc.ca/findajob/resources/write-good-resume)
 
-## Customizing
+##### 3. Markdown text editor
+ * In this tutorial, [VS studio code](https://code.visualstudio.com/) will b used
 
-### Configuration variables
+   
+**_If you are struggling to find a free markdown editor,  [Obsidian](https://obsidian.md/) is completely free and it is very easy to use_**
 
-Hacker will respect the following variables, if set in your site's `_config.yml`:
+# Getting started
 
-```yml
-title: [The title of your site]
-description: [A short description of your site's purpose]
-```
+### 1. Formatting a resume using Markdown
+1. You need to install your Markdown text editor
 
-Additionally, you may choose to set the following optional variables:
+2. If you are going to use VS code for writing your resume, you will need to create a new file with a .md extension and split your screen to get a preview and the script side by side, here is a short tutorial:
+  ![Check Ruby version](create-resume.gif)
 
-```yml
-show_downloads: ["true" or "false" (unquoted) to indicate whether to provide a download URL]
-google_analytics: [Your Google Analytics tracking ID]
-```
+3. To know more about Markdown syntax, here are good resources for Markdown 
+   1. [Markdown guide](https://www.markdownguide.org/)
+   2. [Markdown tutorial](https://www.markdowntutorial.com/) **_Recommended_** 
+   3. [CommonMark tutorial](https://commonmark.org/help/tutorial/) 
 
-### Stylesheet
+    &nbsp;
 
-If you'd like to add your own custom styles:
+An awesome tip to consider while writing resume from _**Modtern Technical Writing, by Andrew Etter**_ 
+1. **Consistency**: Always make all sections of your resume consistent with the same formatting
+2. **Don't duplicate**: Break you resume into sections and don't duplicate
 
-1. Create a file called `/assets/css/style.scss` in your site
-2. Add the following content to the top of the file, exactly as shown:
-    ```scss
-    ---
-    ---
+---
 
-    @import "{{ site.theme }}";
-    ```
-3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
+### 2. Install Jekyll
+**Prerequisities:**
+1. Check if you have the Ruby version 2.5.0 or higher
+  - You can check using ```ruby-v ``` in your command line
 
-*Note: If you'd like to change the theme's Sass variables, you must set new values before the `@import` line in your stylesheet.*
+  ![Check Ruby version](check-ruby-version.gif)
+  If you don't have it or it's not higher than 2.5.0, you can download it from here [Ruby version 2.5.0 or higher](https://www.ruby-lang.org/en/downloads/)
 
-### Layouts
+2. [RubyGems](https://rubygems.org/pages/download)
+   - You can check using ```gcc -v ``` ,  ```g++ -v ``` in your command line ( if any is missing, you can download them from [here](https://gcc.gnu.org/install/)).
 
-If you'd like to change the theme's HTML layout:
 
-1. For some changes such as a custom `favicon`, you can add custom files in your local `_includes` folder. The files [provided with the theme](https://github.com/pages-themes/hacker/tree/master/_includes) provide a starting point and are included by the [original layout template](https://github.com/pages-themes/hacker/blob/master/_layouts/default.html).
-2. For more extensive changes, [copy the original template](https://github.com/pages-themes/hacker/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
-3. Create a file called `/_layouts/default.html` in your site
-4. Paste the default layout content copied in the first step
-5. Customize the layout as you'd like
+Now to install Jekyll, you need to write on the command line ```gem install jekyll bundler ```
 
-### Customizing Google Analytics code
 
-Google has released several iterations to their Google Analytics code over the years since this theme was first created. If you would like to take advantage of the latest code, paste it into `_includes/head-custom-google-analytics.html` in your Jekyll site.
+---
 
-### Overriding GitHub-generated URLs
+### 3. Creating new Jekyll site
+Now after installing Jekyll, we can start building a Jekyll site
 
-Templates often rely on URLs supplied by GitHub such as links to your repository or links to download your project. If you'd like to override one or more default URLs:
+ 1. To create a new site, you will need to write this command ```jekyll new ``` follow by ```your project name ```
 
-1. Look at [the template source](https://github.com/pages-themes/hacker/blob/master/_layouts/default.html) to determine the name of the variable. It will be in the form of `{{ site.github.zip_url }}`.
-2. Specify the URL that you'd like the template to use in your site's `_config.yml`. For example, if the variable was `site.github.url`, you'd add the following:
-    ```yml
-    github:
-      zip_url: http://example.com/download.zip
-      another_url: another value
-    ```
-3. When your site is built, Jekyll will use the URL you specified, rather than the default one provided by GitHub.
+  ![New website](building-site.gif)
 
-*Note: You must remove the `site.` prefix, and each variable name (after the `github.`) should be indent with two space below `github:`.*
+  2. Now you need to go to the new directory, so you will need the command ```cd ``` followed by ```your project name ```
+  3. Now to compile the site that's already automatically generated by Jekyll, you will need this command  ```bundle exec jekyll serve ```
+  
+  4. You will get a link for the localhost port that your generated website is uploaded on, you will copy/paste this link to your browser
+    ![New website](host-server.gif)
 
-For more information, see [the Jekyll variables documentation](https://jekyllrb.com/docs/variables/).
 
-## Roadmap
+&nbsp;
 
-See the [open issues](https://github.com/pages-themes/hacker/issues) for a list of proposed features (and known issues).
+# Building website
 
-## Project philosophy
+Now we have setup everything! It's the time to build your website.
 
-The Hacker theme is intended to make it quick and easy for GitHub Pages users to create their first (or 100th) website. The theme should meet the vast majority of users' needs out of the box, erring on the side of simplicity rather than flexibility, and provide users the opportunity to opt-in to additional complexity if they have specific needs or wish to further customize their experience (such as adding custom CSS or modifying the default layout). It should also look great, but that goes without saying.
+1. Choosing your website theme 
+   - Visit [rubygems.org](https://rubygems.org/).
+   - Write on the search jekyll-theme-"then here write your theme"
+   ![jekyll theme](jekyll-theme.gif)
+   
 
-## Contributing
+2. Open the Jekyll folder that we have created already ``` On your Visual Studio Code: File > Open Folder > Select the folder  ``` 
 
-Interested in contributing to Hacker? We'd love your help. Hacker is an open source project, built one contribution at a time by users like you. See [the CONTRIBUTING file](docs/CONTRIBUTING.md) for instructions on how to contribute.
+**You can then customize the design and the layout of your generated website, but for our example, I will use a built-in theme**
 
-### Previewing the theme locally
+3. We can now clone the repository theme that we have found on step 1. Keep on mind that there are few themes that can be deployed as a GitHub pages, [click here](https://pages.github.com/themes/) to know more about supported themes.
+   - Clone the theme repository
+      - Copy the repository link from Github
+      - Go to Visual Studio, select Clone from Git
+      - Select the folder in your local device to save the cloned repository
+   - Install the packages for the theme
+      - Open the terminal through Terminal > New Terminal
+      -  Write the following command  ```bundle install```
+   - Compile the website
+     - On the same terminal, write the following command ```bundle exec jekyll serve```
+   - Your themed website will be hosted on the local server, copy the link and paste it in your browser.
 
-If you'd like to preview the theme locally (for example, in the process of proposing a change):
 
-1. Clone down the theme's repository (`git clone https://github.com/pages-themes/hacker`)
-2. `cd` into the theme's directory
-3. Run `script/bootstrap` to install the necessary dependencies
-4. Run `bundle exec jekyll serve` to start the preview server
-5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the theme
+Here is more illustration for the process mentioned above:
+   ![clone-website](clone.gif)
 
-### Running tests
+# Hosting your resume
 
-The theme contains a minimal test suite, to ensure a site with the theme would build successfully. To run the tests, simply run `script/cibuild`. You'll need to run `script/bootstrap` once before the test script will work.
+Now after having the site and theme ready, you will need just need to change the content of index.md to the resume.md that you  have built already.
+
+1. Go to ```index.md``` or ```index.markdown``` 
+2. Delete the content there after ```layout:default```
+3. Paste the content of ```resume.md```
+   ![resume](resume.gif)
+4. To delete the header, go to ```default.html``` and remove the content inside the tag ``` <header>``` 
+5. Add this line into your "Gemfile" 
+```gem "github-pages", "~> GITHUB-PAGES-VERSION", group: :jekyll_plugins```
+
+
+
+# Uploading and hosting  on GitHub
+1. Log in to your GitHub account.
+2. Click on the plus icon in the top right corner of the screen and select "New repository".
+3. Give your repository a name. It is recommended to use a name that reflects the purpose of your website, such as "myresume" or "resume-website".
+4. Choose whether you want your repository to be public or private.
+5. Check the box next to "Add a README file".
+6. Click on the "Create repository" button.
+7. upload all files created
+8. [Setup github page](https://www.youtube.com/watch?v=QyFcl_Fba-k)
