@@ -46,6 +46,7 @@ An awesome tip to consider while writing a resume from _**Modern Technical Writi
 1. **Consistency**: Always make all sections of your resume consistent with the same formatting
 2. **Don't duplicate**: Break your resume into sections and don't duplicate
 3. **Accessibility** : Creating documentation that is accessible to users with disabilities, such as vision or hearing impairments.
+4. **Plain language**: Plain language is a style of writing that emphasizes clarity and simplicity, using everyday language and avoiding jargon or technical terms where possible. This approach makes the content more accessible and easier to understand for a wider audience.
 
 ---
 
