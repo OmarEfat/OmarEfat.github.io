@@ -156,8 +156,7 @@ A: Markdown files are lightweight and can be easily shared across different plat
 ---
 Q: Why should I use a Jekyll theme for my website?
 
-A: Jekyll themes are pre-designed website templates that save time and effort while creating a professional-looking website that is optimized for speed and performance. They offer built-in features and functionality and are easy to use, making them a great option for creating a website quickly and easily, regardless of your technical expertise.
-
+A: Jekyll themes are pre-designed website templates that save time and effort while creating a professional-looking website that is optimized for speed and performance. They offer built-in features and functionality and are easy to use, making them a great option for creating a website quickly and easily.
 
 
 
