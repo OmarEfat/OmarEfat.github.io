@@ -3,17 +3,17 @@
 
 ## Purpose
 
-#### The purpose of this tutorial is to show how to host your resume on Github using one of the static generator available like [Jekyll](https://jekyllrb.com/).
+#### The purpose of this tutorial is to show how to host your resume on Github using one of the static generators available like [Jekyll](https://jekyllrb.com/).
 
 
 #### Main goals:
-1.  Using markdown for writing your resume 
-2.  Using Jekyll for building your static website
+1. Using markdown for writing your resume 
+2.  Using Jekyll for building your static
 3.  Using GitHub to host your static website
 
 ## Prerequisites
 
-### There are few prerequisites needed before you start 
+### There are a few prerequisites needed before you start 
 
 ##### 1.  GitHub account
    - [Click here to know how to create an account in GitHub](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
@@ -42,15 +42,16 @@
 
     &nbsp;
 
-An awesome tip to consider while writing resume from _**Modtern Technical Writing, by Andrew Etter**_ 
+An awesome tip to consider while writing a resume from _**Modern Technical Writing, by Andrew Etter**_ 
 1. **Consistency**: Always make all sections of your resume consistent with the same formatting
-2. **Don't duplicate**: Break you resume into sections and don't duplicate
+2. **Don't duplicate**: Break your resume into sections and don't duplicate
+3. **Accessibility** : Creating documentation that is accessible to users with disabilities, such as vision or hearing impairments.
 
 ---
 
 ### 2. Install Jekyll
-**Prerequisities:**
-1. Check if you have the Ruby version 2.5.0 or higher
+**Prerequisites:**
+1. Check if you have Ruby version 2.5.0 or higher
   - You can check using ```ruby-v ``` in your command line
 
   ![Check Ruby version](check-ruby-version.gif)
@@ -83,7 +84,7 @@ Now after installing Jekyll, we can start building a Jekyll site
 
 # Building website
 
-Now we have setup everything! It's the time to build your website.
+Now you have set up everything! It's time to build your website.
 
 1. Choosing your website theme 
    - Visit [rubygems.org](https://rubygems.org/).
@@ -95,9 +96,9 @@ Now we have setup everything! It's the time to build your website.
 
 **You can then customize the design and the layout of your generated website, but for our example, I will use a built-in theme**
 
-3. We can now clone the repository theme that we have found on step 1. Keep on mind that there are few themes that can be deployed as a GitHub pages, [click here](https://pages.github.com/themes/) to know more about supported themes.
+3. We can now clone the repository theme that we have found on step 1. Keep on mind that few themes can be deployed as GitHub pages, [click here](https://pages.github.com/themes/) to know more about supported themes.
    - Clone the theme repository
-      - Copy the repository link from Github
+      - Copy the repository link from GitHub
       - Go to Visual Studio, select Clone from Git
       - Select the folder in your local device to save the cloned repository
    - Install the packages for the theme
@@ -113,15 +114,15 @@ Here is more illustration for the process mentioned above:
 
 # Hosting your resume
 
-Now after having the site and theme ready, you will need just need to change the content of index.md to the resume.md that you  have built already.
+Now after having the site and theme ready, you will need just need to change the content of the index.md to the resume.md that you have built already.
 
 1. Go to ```index.md``` or ```index.markdown``` 
-2. Delete the content there after ```layout:default```
+2. Delete the content thereafter ```layout:default```
 3. Paste the content of ```resume.md```
    ![resume](resume.gif)
 4. To delete the header, go to ```default.html``` and remove the content inside the tag ``` <header>``` 
-5. Add this line into your "Gemfile" 
-```gem "github-pages", "~> GITHUB-PAGES-VERSION", group: :jekyll_plugins```
+5. Add this line to your "Gemfile" 
+```gem "GitHub-pages", "~> GITHUB-PAGES-VERSION", group: :jekyll_plugins```
 
 
 
@@ -133,4 +134,30 @@ Now after having the site and theme ready, you will need just need to change the
 5. Check the box next to "Add a README file".
 6. Click on the "Create repository" button.
 7. upload all files created
-8. [Setup github page](https://www.youtube.com/watch?v=QyFcl_Fba-k)
+8. [Setup GitHub page](https://www.youtube.com/watch?v=QyFcl_Fba-k)
+
+
+# Resources
+1. [Modern Technical Writing by Andrew Etter ](https://www.amazon.ca/Modern-Technical-Writing-Introduction-Documentation-ebook/dp/B01A2QL9SS)
+2. [GitHub Docs](https://docs.github.com/en/get-started/quickstart/hello-world)
+3. [Markdown tutorial](https://www.markdowntutorial.com/)
+
+# Authors and Acknowledgments
+Thanks to Andrew Etter for ["Modern Technical Writing: An Introduction to Software Documentation"](https://www.amazon.ca/Modern-Technical-Writing-Introduction-Documentation-ebook/dp/B01A2QL9SS) book.
+
+Thanks to Nicke Manarian and their team for the great free tool for screen recording [ScreenToGif](https://github.com/NickeManarin/ScreenToGif)
+
+# FAQS
+Q: Why is Markdown better than a word
+processor?
+
+A: Markdown files are lightweight and can be easily shared across different platforms and devices, making them a great choice for collaborative projects, technical documents, and online content.
+
+---
+Q: Why should I use a Jekyll theme for my website?
+
+A: Jekyll themes are pre-designed website templates that save time and effort while creating a professional-looking website that is optimized for speed and performance. They offer built-in features and functionality and are easy to use, making them a great option for creating a website quickly and easily, regardless of your technical expertise.
+
+
+
+
