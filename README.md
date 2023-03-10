@@ -3,7 +3,7 @@
 
 ## Purpose
 
-#### The purpose of this tutorial is to show how to host your resume on Github using one of the static generators available like [Jekyll](https://jekyllrb.com/).
+#### The purpose of this tutorial is to show how to build and host your resume on Github using one of the static generators available like [Jekyll](https://jekyllrb.com/).
 
 
 #### Main goals:
@@ -112,7 +112,7 @@ Now you have set up everything! It's time to build your website.
 Here is more illustration for the process mentioned above:
    ![clone-website](clone.gif)
 
-# Hosting your resume
+# Hosting your Website
 
 Now after having the site and theme ready, you will need just need to change the content of the index.md to the resume.md that you have built already.
 
